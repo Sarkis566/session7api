@@ -9,6 +9,15 @@ const PORT = process.env.PORT || 3030;// iza fi env 2ri menu w chuf chu l port i
 app.get('/', function (req, res) {
     res.send('Hello World')
   })
-app.listen(1234, () => {
+
+  app.get('/students', function (req, res) {
+    var data=[
+        {id:1, name: 'sako'},
+        {id:2, name: 'sarkis'},
+        {id:3, name: 'fadlallah'}
+    ]
+    res.send(data)
+  })
+app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`);
 });
