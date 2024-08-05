@@ -1,6 +1,9 @@
 const express = require("express");
 const app = express();
+var cors = require('cors')
 
+ 
+app.use(cors())
 //require('dotenv').config()
 
 const PORT = process.env.PORT || 3030;// iza fi env 2ri menu w chuf chu l port iza mafi st3ml 3030 
