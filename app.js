@@ -1,7 +1,10 @@
 const express = require("express");
 const app = express();
 var cors = require('cors')
-
+const xlsx=require('xlsx');
+let wb= xlsx.readFile('data.xlsx');
+let ws= wb.sheets['names'];
+let _data = xlsx.utils.sheet_to_json(ws)
  
 app.use(cors())
 //require('dotenv').config()
